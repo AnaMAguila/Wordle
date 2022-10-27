@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Maze&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/estilo.css">
+    <title>WORDLE</title>
+</head>
+<body>
+    <div id="fondo"></div>
+    <div id="titulo">
+        WORDLE JS
+    </div>    
+
+    <div id="tablero">
+            <input type="text" autofocus       class="casilla" id="Fil0Col0" maxlength="1" oninput="saltaSiguiente(0,0)" >
+            <input type="text" disabled="true" class="casilla" id="Fil0Col1" maxlength="1" oninput="saltaSiguiente(0,1)" >
+            <input type="text" disabled="true" class="casilla" id="Fil0Col2" maxlength="1" oninput="saltaSiguiente(0,2)" >
+            <input type="text" disabled="true" class="casilla" id="Fil0Col3" maxlength="1" oninput="saltaSiguiente(0,3)" >
+            <input type="text" disabled="true" class="casilla" id="Fil0Col4" maxlength="1" oninput="saltaSiguiente(0,4)" >
+        <p>
+            <input type="text" disabled="true" class="casilla" id="Fil1Col0" maxlength="1" oninput="saltaSiguiente(1,0)" >
+            <input type="text" disabled="true" class="casilla" id="Fil1Col1" maxlength="1" oninput="saltaSiguiente(1,1)" >
+            <input type="text" disabled="true" class="casilla" id="Fil1Col2" maxlength="1" oninput="saltaSiguiente(1,2)" >
+            <input type="text" disabled="true" class="casilla" id="Fil1Col3" maxlength="1" oninput="saltaSiguiente(1,3)" >
+            <input type="text" disabled="true" class="casilla" id="Fil1Col4" maxlength="1" oninput="saltaSiguiente(1,4)" >
+        </p>
+        <p>
+            <input type="text" disabled="true" class="casilla" id="Fil2Col0" maxlength="1" oninput="saltaSiguiente(2,0)" >
+            <input type="text" disabled="true" class="casilla" id="Fil2Col1" maxlength="1" oninput="saltaSiguiente(2,1)" >
+            <input type="text" disabled="true" class="casilla" id="Fil2Col2" maxlength="1" oninput="saltaSiguiente(2,2)" >
+            <input type="text" disabled="true" class="casilla" id="Fil2Col3" maxlength="1" oninput="saltaSiguiente(2,3)" >
+            <input type="text" disabled="true" class="casilla" id="Fil2Col4" maxlength="1" oninput="saltaSiguiente(2,4)" >
+        </p>
+        <p>
+            <input type="text" disabled="true" class="casilla" id="Fil3Col0" maxlength="1" oninput="saltaSiguiente(3,0)" >
+            <input type="text" disabled="true" class="casilla" id="Fil3Col1" maxlength="1" oninput="saltaSiguiente(3,1)" >
+            <input type="text" disabled="true" class="casilla" id="Fil3Col2" maxlength="1" oninput="saltaSiguiente(3,2)" >
+            <input type="text" disabled="true" class="casilla" id="Fil3Col3" maxlength="1" oninput="saltaSiguiente(3,3)" >
+            <input type="text" disabled="true" class="casilla" id="Fil3Col4" maxlength="1" oninput="saltaSiguiente(3,4)" >
+        </p>
+        <p>
+            <input type="text" disabled="true" class="casilla" id="Fil4Col0" maxlength="1" oninput="saltaSiguiente(4,0)" >
+            <input type="text" disabled="true" class="casilla" id="Fil4Col1" maxlength="1" oninput="saltaSiguiente(4,1)" >
+            <input type="text" disabled="true" class="casilla" id="Fil4Col2" maxlength="1" oninput="saltaSiguiente(4,2)" >
+            <input type="text" disabled="true" class="casilla" id="Fil4Col3" maxlength="1" oninput="saltaSiguiente(4,3)" >
+            <input type="text" disabled="true" class="casilla" id="Fil4Col4" maxlength="1" oninput="saltaSiguiente(4,4)" >
+        </p>
+        <p>
+            <input type="text" disabled="true" class="casilla" id="Fil5Col0" maxlength="1" oninput="saltaSiguiente(5,0)" >
+            <input type="text" disabled="true" class="casilla" id="Fil5Col1" maxlength="1" oninput="saltaSiguiente(5,1)" >
+            <input type="text" disabled="true" class="casilla" id="Fil5Col2" maxlength="1" oninput="saltaSiguiente(5,2)" >
+            <input type="text" disabled="true" class="casilla" id="Fil5Col3" maxlength="1" oninput="saltaSiguiente(5,3)" >
+            <input type="text" disabled="true" class="casilla" id="Fil5Col4" maxlength="1" oninput="saltaSiguiente(5,4)" >
+        </p>
+    </div>
+
+    <div id="solucion">
+        <div id="cuadrado" class="verde"></div> Letra correcta
+        <div id="cuadrado" class="amarillo"></div> Letra en lugar equivocado
+        <div id="cuadrado" class="gris"></div> Letra incorrecta
+
+    </div>
+
+    <div id="div_boton"><button class="myButton" onclick="location.reload()">Reiniciar la partida</button></div>
+
+    <script src="./js/palabras.js"></script>
+    <script src="./js/juego.js"></script>
+</body>
+</html>
